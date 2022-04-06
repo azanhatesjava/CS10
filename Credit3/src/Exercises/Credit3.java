@@ -1,5 +1,15 @@
 package Exercises;
+/*
 
+Program: Credit3.java          Date: 4/6/2022
+
+
+Author: Azan Kamran 
+School: CHHS
+Course: Computer Science 10
+ 
+
+*/
 public class Credit3 
 {
 
