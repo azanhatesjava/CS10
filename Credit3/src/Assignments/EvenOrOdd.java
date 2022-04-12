@@ -2,6 +2,18 @@ package Assignments;
 
 import java.util.Scanner;
 
+/*
+
+Program: EvenOrOdd.java          Date: 4/6/2022
+
+
+Author: Azan Kamran 
+School: CHHS
+Course: Computer Science 10
+ 
+
+*/
+
 public class EvenOrOdd
 {
 
@@ -17,12 +29,19 @@ public class EvenOrOdd
 		
 		if(ans1 == 1)
 		{
-			System.out.print("The integer " + int1 + " is odd.");
+			System.out.print("\nThe integer " + int1 + " is odd.");
 		}
 		else
 		{
-			System.out.print("The integer " + int1 + " is even.");
+			System.out.print("\nThe integer " + int1 + " is even.");
 		}
 	}
 
 }
+/*
+
+Enter an integer: 48935
+
+The integer 48935 is odd.
+
+*/

@@ -1,5 +1,17 @@
 package Assignments;
 
+/*
+
+Program: BingoCard.java          Date: 4/6/2022
+
+
+Author: Azan Kamran 
+School: CHHS
+Course: Computer Science 10
+ 
+
+*/
+
 public class BingoCard
 {
 

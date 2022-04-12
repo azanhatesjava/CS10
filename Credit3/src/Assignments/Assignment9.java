@@ -2,6 +2,18 @@ package Assignments;
 
 import java.util.Scanner;
 
+/*
+
+Program: Assignment9.java          Date: 4/6/2022
+
+
+Author: Azan Kamran 
+School: CHHS
+Course: Computer Science 10
+ 
+
+*/
+
 public class Assignment9
 {
 
@@ -30,3 +42,13 @@ public class Assignment9
 	}
 
 }
+
+/*
+
+Enter an integer: 14
+Enter a second-integer: 4
+
+14 / 4 = 3
+14 % 4 = 2
+
+*/
