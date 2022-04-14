@@ -1,6 +1,6 @@
 package Assignments;
 
-import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Assignment13
@@ -9,6 +9,7 @@ public class Assignment13
 	public static void main(String[] args)
 	{
 		Scanner input = new Scanner(System.in);
+		NumberFormat dc = NumberFormat.getCurrencyInstance();
 		
 		System.out.print("Enter the number of copies to be printed: ");
 		int copies = input.nextInt();
@@ -16,42 +17,37 @@ public class Assignment13
 		if(copies >=0 && copies <= 99)
 		{
 			double cost = (copies*0.30);
-			Math.round(cost);
 			
 			System.out.println("\nPrice per copy is: $0.30");
-			System.out.print("Total cost is: " + cost);
+			System.out.print("Total cost is: " + dc.format(cost));
 		}
 		else if(copies >=100 && copies <= 499)
 		{
 			double cost = (copies*0.28);
-			Math.round(cost);
 			
 			System.out.println("\nPrice per copy is: $0.28");
-			System.out.print("Total cost is: " + Math.round(cost));
+			System.out.print("Total cost is: " + dc.format(cost));
 		}
 		else if(copies >=500 && copies <= 749)
 		{
 			double cost = (copies*0.27);
-			Math.round(cost);
 			
 			System.out.println("\nPrice per copy is: $0.27");
-			System.out.print("Total cost is: " + cost);
+			System.out.print("Total cost is: " +dc.format(cost));
 		}
 		else if(copies >=750 && copies <= 1000)
 		{
 			double cost = (copies*0.26);
-			Math.round(cost);
 			
 			System.out.println("\nPrice per copy is: $0.26");
-			System.out.print("Total cost is: " + cost);
+			System.out.print("Total cost is: " + dc.format(cost));
 		}
 		else
 		{
 			double cost = (copies*0.25);
-			Math.round(cost);
 			
 			System.out.println("\nPrice per copy is: $0.25");
-			System.out.print("Total cost is: " + cost);
+			System.out.print("Total cost is: " + dc.format(cost));
 		}
 	}
 
