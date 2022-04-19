@@ -95,14 +95,25 @@ public class Credit3GUI {
 			{
 				String FN = fnt.getText();
 				String LN = lnt.getText();
+				String age = agt.getText();
 				
-				disl.setText("First name: " + FN + "Last name: " + LN);
+				disl.setText("First name: " + FN + "Last name: " + LN
+						+ "and your age is : " + age);
 			}
 		});
 		sb.setBounds(384, 37, 228, 80);
 		panel.add(sb);
 		
 		JButton rs = new JButton("Reset");
+		rs.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				fnt.setText(" ");
+				lnt.setText(" ");
+				agt.setText(" ");
+			}
+		});
 		rs.setBounds(384, 129, 228, 80);
 		panel.add(rs);
 	}
