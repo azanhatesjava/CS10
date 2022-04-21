@@ -1,4 +1,4 @@
-package Assignments;
+package lol;
 /*
 
 Program: FromMeToYou.java          Date: 4/6/2022
@@ -14,12 +14,11 @@ public class FromMeToYou
 
 	public static void main(String[] args) 
 	{
-		String message = "From Mr. Wilson\n"
-						+ "Address: Acer Computer, Lab 314\n"
-						+ "Date: November 2, 2020\n\n\n"
-						+ "To: Azan Kamran\n\n\n"
-						+ "Message: Help! I'm trapped inside a computer!";
-		System.out.println(message);
+		System.out.println("From Mr. Wilson\n"
+				+ "Address: Acer Computer, Lab 314\n"
+				+ "Date: November 2, 2020\n\n\n"
+				+ "To: Azan Kamran\n\n\n"
+				+ "Message: Help! I'm trapped inside a computer!"); //prints the message
 	}
 
 }

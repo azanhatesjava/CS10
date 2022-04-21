@@ -1,4 +1,4 @@
-package Assignments;
+package lol;
 
 import java.text.NumberFormat;
 import java.util.Scanner;

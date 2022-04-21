@@ -1,4 +1,4 @@
-package Assignments;
+package lol;
 
 public class PizzaCost
 {

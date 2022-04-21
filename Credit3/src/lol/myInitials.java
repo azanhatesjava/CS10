@@ -1,4 +1,4 @@
-package Assignments;
+package lol;
 /*
 
 Program: myInitials.java          Date: 4/6/2022
@@ -25,7 +25,7 @@ public class myInitials
 						+ "   /                \\         |  \\\n"
 						+ "  /                  \\        |   \\\n"
 						+ " /                    \\       |    \\\n"
-						+ "/                      \\      |     \\\n\n\n\n";
+						+ "/                      \\      |     \\\n\n\n\n"; // creates a variable for my initials
 		String CS =" ---------------      ---------------\n"
 				+ "|                     |\n"
 				+ "|                     |\n"
@@ -38,9 +38,9 @@ public class myInitials
 				+ "|                                   |\n"
 				+ "|                                   |\n"
 				+ "|                                   |\n"
-				+ " ---------------      ---------------";
-		System.out.println(initials);
-		System.out.print(CS);
+				+ " ---------------      ---------------"; // creates a variable for the CS initials
+		System.out.println(initials); // prints initials
+		System.out.print(CS); // prints CS
 	}
 
 }

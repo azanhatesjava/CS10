@@ -75,6 +75,14 @@ public class Special2Dig
 		panel.add(dis);
 		
 		JButton btnNewButton = new JButton("CLEAR");
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				td.setText("");
+				dis.setText("");
+			}
+		});
 		btnNewButton.setBounds(162, 88, 125, 45);
 		panel.add(btnNewButton);
 		
@@ -83,12 +91,28 @@ public class Special2Dig
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				String digits = td.getText();
-				int twoD = Integer.parseInt(digits);
+				String digits = td.getText();//records the two digits
+				int twoD = Integer.parseInt(digits);//gets the integer part
 				
-				int firstD = twoD / 10;
+				int firstD = twoD / 10;//records the first digit
+				int secondD = twoD % 10;//records the second digit
 				
-				dis.setText("" + firstD);
+				int sum = firstD + secondD;//record the sum
+				
+				int prdc = firstD*secondD;//record the product
+				
+				int check = sum + prdc;
+						
+				if(check == twoD) // checks if the twoD equals check
+				{
+					dis.setText(twoD + " is a special two digit number"); // displays it's a special number
+				}
+				else
+				{
+					dis.setText(twoD + " is not a special two digit number"); // displays it's not a special number
+				}
+				
+				
 			}
 		});
 		btnNewButton_1.setBounds(162, 27, 125, 45);

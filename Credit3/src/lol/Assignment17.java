@@ -1,4 +1,4 @@
-package Assignments;
+package lol;
 
 import java.util.Scanner;
 
@@ -39,8 +39,11 @@ public class Assignment17
 			
 			System.out.print("\nPlease enter -1 to terminate the program or enter another gpa:");
 			gpa = input.nextDouble();
+			if (gpa == -1)
+			{
+				System.out.print("Thank you for using our program, have a great day");
+				System.exit(0);
+			}
 		}
 	}
-
-
 }
