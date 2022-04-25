@@ -1,4 +1,4 @@
-package lol;
+package Assignments;
 /*
 
 Program: myInitials.java          Date: 4/6/2022
@@ -39,8 +39,8 @@ public class myInitials
 				+ "|                                   |\n"
 				+ "|                                   |\n"
 				+ " ---------------      ---------------"; // creates a variable for the CS initials
-		System.out.println(initials); // prints initials
-		System.out.print(CS); // prints CS
+		System.out.println(initials); // prints my initials
+		System.out.print(CS); // prints CS initials
 	}
 
 }

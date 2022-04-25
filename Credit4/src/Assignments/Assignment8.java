@@ -1,4 +1,4 @@
-package lol;
+package Assignments;
 
 import java.util.Scanner;
 /*
@@ -20,12 +20,11 @@ public class Assignment8
 		Scanner input = new Scanner(System.in); // calls in scanner
 		
 		System.out.print("Enter a three-digit number: "); // prompts the user to enter input
-		int num = input.nextInt(); // takes in the input
+		int inpt = input.nextInt(); // takes in the input
 		
-		String num0 = Integer.toString(num); // converts integer to a string
-		char num1 = num0.charAt(0); // isolates first digit
-		char num2 = num0.charAt(1); // isolates second digit
-		char num3 = num0.charAt(2); // isolates third digit
+		int num1 = inpt/100; // isolates first digit
+		int num2 = inpt%100/10; // isolates second digit
+		int num3 = inpt%100%10%10; // isolates third digit
 		
 		System.out.println("\nThe hundreds-place digit is: " + num1); // prints first digit
 		System.out.println("The tens-place digit is: " + num2); // prints second digit
@@ -36,7 +35,7 @@ public class Assignment8
 
 }
 
-/*
+/* Screen Dump
 
 Enter a three-digit number: 385
 

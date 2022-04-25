@@ -1,4 +1,4 @@
-package lol;
+package Assignments;
 /*
 
 Program: FromMeToYou.java          Date: 4/6/2022

@@ -9,13 +9,14 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Credit3GUI {
 
 	private JFrame frame;
 	private JTextField fnt;
 	private JTextField lnt;
-	private JTextField agt;
 
 	/**
 	 * Launch the application.
@@ -45,12 +46,12 @@ public class Credit3GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 710, 460);
+		frame.setBounds(100, 100, 751, 498);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 672, 398);
+		panel.setBounds(0, 0, 725, 448);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -74,19 +75,19 @@ public class Credit3GUI {
 		lnt.setBounds(109, 91, 238, 33);
 		panel.add(lnt);
 		
-		JLabel agl = new JLabel("Age");
+		JLabel agl = new JLabel("Grade");
 		agl.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		agl.setBounds(24, 139, 99, 43);
 		panel.add(agl);
 		
-		agt = new JTextField();
-		agt.setColumns(10);
+		JLabel disl = new JLabel("");
+		disl.setBounds(39, 330, 642, 107);
+		panel.add(disl);
+		
+		JComboBox agt = new JComboBox();
+		agt.setModel(new DefaultComboBoxModel(new String[] {"10", "11", "12"}));
 		agt.setBounds(109, 145, 238, 33);
 		panel.add(agt);
-		
-		JLabel disl = new JLabel("");
-		disl.setBounds(20, 269, 642, 107);
-		panel.add(disl);
 		
 		JButton sb = new JButton("Submit");
 		sb.addActionListener(new ActionListener() 
@@ -95,10 +96,22 @@ public class Credit3GUI {
 			{
 				String FN = fnt.getText();
 				String LN = lnt.getText();
-				String age = agt.getText();
+				int grade;
+				if(agt.getSelectedItem().equals("10"))
+				{
+					grade = 10;
+				}
+				else if(agt.getSelectedItem().equals("10"))
+				{
+					grade = 11;
+				}
+				else
+				{
+					grade = 12;
+				}
 				
 				disl.setText("First name: " + FN + "Last name: " + LN
-						+ "and your age is : " + age);
+						+ "and your age is : " + grade);
 			}
 		});
 		sb.setBounds(384, 37, 228, 80);
@@ -111,7 +124,6 @@ public class Credit3GUI {
 			{
 				fnt.setText(" ");
 				lnt.setText(" ");
-				agt.setText(" ");
 			}
 		});
 		rs.setBounds(384, 129, 228, 80);

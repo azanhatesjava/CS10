@@ -1,5 +1,14 @@
 package lol;
+/*
 
+Program: Assignment13.java          Date: 4/25/2022
+
+
+Author: Azan Kamran 
+School: CHHS
+Course: Computer Science 10
+ 
+*/
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -8,6 +17,7 @@ public class Assignment13
 
 	public static void main(String[] args)
 	{
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		NumberFormat dc = NumberFormat.getCurrencyInstance();
 		
@@ -52,3 +62,11 @@ public class Assignment13
 	}
 
 }
+/* Screen Dump
+
+Enter the number of copies to be printed: 783
+
+Price per copy is: $0.26
+Total cost is: $203.58
+
+*/

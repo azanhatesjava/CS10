@@ -1,4 +1,4 @@
-package lol;
+package Assignments;
 /*
 
 Program: BingoCard.java          Date: 4/6/2022
