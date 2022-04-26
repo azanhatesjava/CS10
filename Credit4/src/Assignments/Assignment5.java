@@ -18,7 +18,7 @@ public class Assignment5
 		int ans2 = (179 + 21 + 10) / 7 + 181; // calculates second equation
 		int ans3 = 10389 * 56 * 11 + 2246; // calculates third equation
 		
-		System.out.println("79 + 3 * (4 + 82 - 68) - 7 +19 = " + ans1); // prints first equation + answer
+		System.out.println("79 + 3 * (4 + 82 - 68) - 7 + 19 = " + ans1); // prints first equation + answer
 		System.out.println("(179 + 21 + 10) / 7 + 181 = " + ans2); // prints second equation + answer
 		System.out.print("10389 * 56 * 11 + 2246 = " + ans3); // prints third equation + answer
 	}
@@ -26,7 +26,7 @@ public class Assignment5
 }
 /* Screen Dump
 
-79 + 3 * (4 + 82 - 68) - 7 +19 = 145
+79 + 3 * (4 + 82 - 68) - 7 + 19 = 145
 (179 + 21 + 10) / 7 + 181 = 211
 10389 * 56 * 11 + 2246 = 6401870
 

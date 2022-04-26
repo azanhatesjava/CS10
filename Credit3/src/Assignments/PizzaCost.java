@@ -18,15 +18,15 @@ public class PizzaCost
 
 	public static void main(String[] args)
 	{
-		@SuppressWarnings("resource")
-		Scanner input = new Scanner(System.in);
-		NumberFormat dc = NumberFormat.getCurrencyInstance();
+		@SuppressWarnings("resource") // suppresses leaking input variable
+		Scanner input = new Scanner(System.in); // calls in scanner
+		NumberFormat dc = NumberFormat.getCurrencyInstance(); // formats dc for currency
 		
-		System.out.print("Enter the diameter of the pizza in inches: ");
-		int d1 = input.nextInt();
+		System.out.print("Enter the diameter of the pizza in inches: "); // asks user for diameter
+		int d1 = input.nextInt(); // takes in input
 		
-		double cost = (0.05*d1*d1 + 1 + 0.75);
-		System.out.print("The cost of making pizza is: " + dc.format(cost));
+		double cost = (0.05*d1*d1 + 1 + 0.75); // calculates pizza cost
+		System.out.print("The cost of making pizza is: " + dc.format(cost)); // prints cost of pizza
 	}
 
 }

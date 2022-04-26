@@ -19,49 +19,45 @@ public class Assignment11
 
 	public static void main(String[] args)
 	{
-		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Please enter any three digits: ");
-		int input1 = input.nextInt();
-		String digits = Integer.toString(input1);
+		Scanner input = new Scanner(System.in); // calls in scanner
 		
-		int raw1 = digits.charAt(0);
-		int raw2 = digits.charAt(1);
-		int raw3 = digits.charAt(2);
+		System.out.print("Please enter any three digits: "); // asks for input
+		int digits = input.nextInt(); // records input
 		
-		int num1 = (raw1 - 48);
-		int num2 = (raw2 - 48);
-		int num3 = (raw3 - 48);
+		int num1 = digits/100; // isolates first digit
+		int num2 = digits%100/10; // isolates second digit
+		int num3 = digits%100%10; // isolates third digit
 		
-		if (num1 >= num2 && num1 >= num3)
+		if (num1 >= num2 && num1 >= num3) // checks if num1 is the highest number
 		{
-			System.out.println("\nThe largest of the three digits is: " + num1);
+			System.out.println("\nThe largest of the three digits is: " + num1); // says num1 is the highest
 		}
-		else if (num2 >= num1 && num2 >= num3)
+		else if (num2 >= num1 && num2 >= num3) // checks if num2 is the highest number
 		{
-			System.out.println("\nThe largest of the three digits is: " + num2);
+			System.out.println("\nThe largest of the three digits is: " + num2); // says num2 is the highest
 		}
-		else
+		else // determines that num3 is the highest number
 		{
-			System.out.println("\nThe largest of the three digits is: " + num3);
+			System.out.println("\nThe largest of the three digits is: " + num3); // says num3 is the highest
 		}
 		
-		if (num1 <= num2 && num1 <= num3)
+		if (num1 <= num2 && num1 <= num3) // checks if num1 is the smallest number
 		{
-			System.out.println("The smallest of the three digits is: " + num1);
+			System.out.println("The smallest of the three digits is: " + num1); // says num1 is the smallest
 		}
-		else if (num2 <= num1 && num2 <= num3)
+		else if (num2 <= num1 && num2 <= num3) // checks if num2 is the smallest number
 		{
-			System.out.println("The smallest of the three digits is: " + num2);
+			System.out.println("The smallest of the three digits is: " + num2); // says num2 is the smallest
 		}
-		else
+		else // determines that num3 is the smallest number
 		{
-			System.out.println("The smallest of the three digits is " + num3);
+			System.out.println("The smallest of the three digits is " + num3); // says num3 is the smallest
 		}
 		
-		System.out.println("The sum of the three digits is: " + (num1 + num2 + num3));
-		System.out.println("The product of the three digits is: " + (num1 * num2 * num3));
-		System.out.println("The average of the three digits is: " + ((num1 + num2 + num3)/3));
+		System.out.println("The sum of the three digits is: " + (num1 + num2 + num3)); // adds the three digits
+		System.out.println("The product of the three digits is: " + (num1 * num2 * num3)); // multiplies the three digits
+		System.out.println("The average of the three digits is: " + ((num1 + num2 + num3)/3)); // averages the three digits
 	}
 
 }
