@@ -1,4 +1,4 @@
-package lol;
+package Assignments;
 
 import java.util.Scanner;
 
@@ -20,6 +20,7 @@ public class Assignment11
 	public static void main(String[] args)
 	{
 		
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in); // calls in scanner
 		
 		System.out.print("Please enter any three digits: "); // asks for input

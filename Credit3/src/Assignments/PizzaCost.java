@@ -26,7 +26,7 @@ public class PizzaCost
 		int d1 = input.nextInt(); // takes in input
 		
 		double cost = (0.05*d1*d1 + 1 + 0.75); // calculates pizza cost
-		System.out.print("The cost of making pizza is: " + dc.format(cost)); // prints cost of pizza
+		System.out.print("The cost of making pizza is: " + dc.format(cost)); // prints cost of pizza formatted
 	}
 
 }

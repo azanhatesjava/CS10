@@ -17,6 +17,7 @@ public class Assignment8
 
 	public static void main(String[] args) 
 	{
+		@SuppressWarnings("resource") // suppresses warning for leaking "input" variable
 		Scanner input = new Scanner(System.in); // calls in scanner
 		
 		System.out.print("Enter a three-digit number: "); // prompts the user to enter input
