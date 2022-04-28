@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class Credit3GUI {
 
@@ -18,6 +19,8 @@ public class Credit3GUI {
 	private JTextField fnt;
 	private JTextField lnt;
 
+	ImageIcon img1 = new ImageIcon("/Credit3/src/img1.png");
+	
 	/**
 	 * Launch the application.
 	 */
@@ -81,13 +84,17 @@ public class Credit3GUI {
 		panel.add(agl);
 		
 		JLabel disl = new JLabel("");
-		disl.setBounds(39, 330, 642, 107);
+		disl.setBounds(359, 260, 322, 177);
 		panel.add(disl);
 		
 		JComboBox agt = new JComboBox();
 		agt.setModel(new DefaultComboBoxModel(new String[] {"10", "11", "12"}));
 		agt.setBounds(109, 145, 238, 33);
 		panel.add(agt);
+		
+		JLabel img = new JLabel("");
+		img.setBounds(24, 244, 323, 177);
+		panel.add(img);
 		
 		JButton sb = new JButton("Submit");
 		sb.addActionListener(new ActionListener() 
@@ -100,6 +107,7 @@ public class Credit3GUI {
 				if(agt.getSelectedItem().equals("10"))
 				{
 					grade = 10;
+					img.setIcon(img1);
 				}
 				else if(agt.getSelectedItem().equals("10"))
 				{
