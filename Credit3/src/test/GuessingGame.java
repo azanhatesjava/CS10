@@ -1,4 +1,4 @@
-package lol;
+package test;
 
 import java.util.Scanner;
 
