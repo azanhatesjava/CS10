@@ -19,7 +19,7 @@ public class Credit3GUI {
 	private JTextField fnt;
 	private JTextField lnt;
 
-	ImageIcon img1 = new ImageIcon("/Credit3/src/img1.png");
+	ImageIcon img1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit3\\src\\img.png");
 	
 	/**
 	 * Launch the application.
@@ -109,9 +109,12 @@ public class Credit3GUI {
 					grade = 10;
 					img.setIcon(img1);
 				}
-				else if(agt.getSelectedItem().equals("10"))
+				else if(agt.getSelectedItem().equals("11"))
 				{
 					grade = 11;
+					Credit3GUI_v2 k = new Credit3GUI_v2();
+					k.setVisible(true);
+					window.frame.setVisible(true);	
 				}
 				else
 				{

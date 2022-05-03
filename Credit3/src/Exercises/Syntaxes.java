@@ -1,6 +1,6 @@
 package Exercises;
 
-public class SyntaxExercises 
+public class Syntaxes 
 {
 
 	public static void main(String[] args) 

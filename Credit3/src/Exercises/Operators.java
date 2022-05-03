@@ -1,6 +1,6 @@
 package Exercises;
 
-public class OperatorsExercises 
+public class Operators 
 {
 
 	public static void main(String[] args) 
