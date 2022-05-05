@@ -1,10 +1,13 @@
-package Assignments;
+package test;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
+import javax.swing.border.LineBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class CS10FinalProject {
 
@@ -43,29 +46,24 @@ public class CS10FinalProject {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.BLACK);
-		panel.setBounds(0, 0, 10, 811);
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel.setBounds(64, 93, 350, 200);
 		frame.getContentPane().add(panel);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.BLACK);
-		panel_1.setBounds(474, 0, 10, 811);
-		frame.getContentPane().add(panel_1);
+		JButton bag = new JButton("Bag");
+		bag.setBounds(50, 480, 120, 120);
+		frame.getContentPane().add(bag);
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(Color.BLACK);
-		panel_2.setBounds(0, 0, 484, 10);
-		frame.getContentPane().add(panel_2);
+		JButton ft = new JButton("Fight");
+		ft.setBounds(180, 410, 120, 120);
+		frame.getContentPane().add(ft);
 		
-		JPanel panel_2_1 = new JPanel();
-		panel_2_1.setBackground(Color.BLACK);
-		panel_2_1.setBounds(0, 801, 484, 10);
-		frame.getContentPane().add(panel_2_1);
+		JButton run = new JButton("Run");
+		run.setBounds(311, 480, 120, 120);
+		frame.getContentPane().add(run);
 		
-		JPanel panel_2_2 = new JPanel();
-		panel_2_2.setBackground(Color.BLACK);
-		panel_2_2.setBounds(150, 0, 170, 20);
-		frame.getContentPane().add(panel_2_2);
+		JButton quit = new JButton("Quit");
+		quit.setBounds(180, 550, 120, 120);
+		frame.getContentPane().add(quit);
 	}
-
 }

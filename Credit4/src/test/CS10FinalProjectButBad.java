@@ -1,4 +1,4 @@
-package Assignments;
+package test;
 
 import java.awt.EventQueue;
 

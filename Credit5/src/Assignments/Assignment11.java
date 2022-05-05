@@ -1,10 +1,9 @@
 package Assignments;
 
 import java.util.Scanner;
-
 /*
 
-Program: Assignment8.java          Date: 4/6/2022
+Program: Assignment11.java          Date: 4/6/2022
 
 
 Author: Azan Kamran 
@@ -13,14 +12,13 @@ Course: Computer Science 10
  
 
 */
-
 public class Assignment11
 {
 
 	public static void main(String[] args)
 	{
 		
-		@SuppressWarnings("resource")
+		@SuppressWarnings("resource") // suppresses warning from leaking "input" variable
 		Scanner input = new Scanner(System.in); // calls in scanner
 		
 		System.out.print("Please enter any three digits: "); // asks for input
