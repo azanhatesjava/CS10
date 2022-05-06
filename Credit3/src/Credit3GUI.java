@@ -112,9 +112,7 @@ public class Credit3GUI {
 				else if(agt.getSelectedItem().equals("11"))
 				{
 					grade = 11;
-					Credit3GUI_v2 k = new Credit3GUI_v2();
-					k.setVisible(true);
-					window.frame.setVisible(true);	
+					Credit3GUI_v2 k = new Credit3GUI_v2();	
 				}
 				else
 				{
