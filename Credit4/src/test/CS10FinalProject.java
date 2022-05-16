@@ -20,6 +20,8 @@ public class CS10FinalProject {
 
 	ImageIcon bg1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\bg1.png");
 	ImageIcon quit1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit1.png");
+	ImageIcon char1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\char.png");
+	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\enemy.png");
 	
 	/**
 	 * Launch the application.
@@ -115,6 +117,70 @@ public class CS10FinalProject {
 		hp10.setBounds(90, 0, 10, 10);
 		hpbar.add(hp10);
 		
+		JPanel hpbar_1 = new JPanel();
+		hpbar_1.setLayout(null);
+		hpbar_1.setBackground(SystemColor.menu);
+		hpbar_1.setBounds(287, 207, 100, 10);
+		scrn.add(hpbar_1);
+		
+		JPanel hp1_1 = new JPanel();
+		hp1_1.setBackground(SystemColor.menu);
+		hp1_1.setBounds(0, 0, 10, 10);
+		hpbar_1.add(hp1_1);
+		
+		JPanel hp2_1 = new JPanel();
+		hp2_1.setBackground(SystemColor.menu);
+		hp2_1.setBounds(10, 0, 10, 10);
+		hpbar_1.add(hp2_1);
+		
+		JPanel hp3_1 = new JPanel();
+		hp3_1.setBackground(SystemColor.menu);
+		hp3_1.setBounds(20, 0, 10, 10);
+		hpbar_1.add(hp3_1);
+		
+		JPanel hp4_1 = new JPanel();
+		hp4_1.setBackground(SystemColor.menu);
+		hp4_1.setBounds(30, 0, 10, 10);
+		hpbar_1.add(hp4_1);
+		
+		JPanel hp5_1 = new JPanel();
+		hp5_1.setBackground(SystemColor.menu);
+		hp5_1.setBounds(40, 0, 10, 10);
+		hpbar_1.add(hp5_1);
+		
+		JPanel hp6_1 = new JPanel();
+		hp6_1.setBackground(SystemColor.menu);
+		hp6_1.setBounds(50, 0, 10, 10);
+		hpbar_1.add(hp6_1);
+		
+		JPanel hp7_1 = new JPanel();
+		hp7_1.setBackground(SystemColor.menu);
+		hp7_1.setBounds(60, 0, 10, 10);
+		hpbar_1.add(hp7_1);
+		
+		JPanel hp8_1 = new JPanel();
+		hp8_1.setBackground(SystemColor.menu);
+		hp8_1.setBounds(70, 0, 10, 10);
+		hpbar_1.add(hp8_1);
+		
+		JPanel hp9_1 = new JPanel();
+		hp9_1.setBackground(SystemColor.menu);
+		hp9_1.setBounds(80, 0, 10, 10);
+		hpbar_1.add(hp9_1);
+		
+		JPanel hp10_1 = new JPanel();
+		hp10_1.setBackground(SystemColor.menu);
+		hp10_1.setBounds(90, 0, 10, 10);
+		hpbar_1.add(hp10_1);
+		
+		JLabel enemy = new JLabel("");
+		enemy.setBounds(300, 15, 73, 169);
+		scrn.add(enemy);
+		
+		JLabel Char = new JLabel("");
+		Char.setBounds(10, 28, 211, 225);
+		scrn.add(Char);
+		
 		JLabel bg = new JLabel("");
 		bg.setBounds(5, 5, 410, 290);
 		scrn.add(bg);
@@ -124,11 +190,53 @@ public class CS10FinalProject {
 		frame.getContentPane().add(HP);
 		
 		JButton ft = new JButton("Fight");
+		ft.setBounds(180, 435, 120, 120);
+		frame.getContentPane().add(ft);
+		
+		JButton run = new JButton("Run");
+		run.setBounds(311, 505, 120, 120);
+		frame.getContentPane().add(run);
+		
+		JButton on = new JButton("ON");
+		on.setBounds(356, 363, 90, 23);
+		frame.getContentPane().add(on);
+		
+		JButton quit = new JButton("Quit");
+		quit.setBounds(180, 575, 120, 120);
+		frame.getContentPane().add(quit);
+		
 		ft.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				
+			}
+		});
+		
+
+		run.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+			}
+		});
+		
+		HP.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				HP.setText("rawr");
+			}
+		});
+		
+		on.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				// sets background to fight scene 1
 				bg.setIcon(bg1);
+				// sets all hp bars to full
 				hp1.setBackground(Color.green);
 				hp2.setBackground(Color.green);
 				hp3.setBackground(Color.green);
@@ -139,16 +247,25 @@ public class CS10FinalProject {
 				hp8.setBackground(Color.green);
 				hp9.setBackground(Color.green);
 				hp10.setBackground(Color.green);
+				// sets all enemy hp bars to full
+				hp1_1.setBackground(Color.green);
+				hp2_1.setBackground(Color.green);
+				hp3_1.setBackground(Color.green);
+				hp4_1.setBackground(Color.green);
+				hp5_1.setBackground(Color.green);
+				hp6_1.setBackground(Color.green);
+				hp7_1.setBackground(Color.green);
+				hp8_1.setBackground(Color.green);
+				hp9_1.setBackground(Color.green);
+				hp10_1.setBackground(Color.green);
+				// makes characters appear
+				Char.setIcon(char1);
+				enemy.setIcon(enemy1);
+				// gets rid of on button
+				on.setVisible(false);
 			}
 		});
-		ft.setBounds(180, 435, 120, 120);
-		frame.getContentPane().add(ft);
-		
-		JButton run = new JButton("Run");
-		run.setBounds(311, 505, 120, 120);
-		frame.getContentPane().add(run);
-		
-		JButton quit = new JButton("Quit");
+
 		quit.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -166,11 +283,25 @@ public class CS10FinalProject {
 				hp8.setBackground(Color.black);
 				hp9.setBackground(Color.black);
 				hp10.setBackground(Color.black);
+				// makes enemy hp bars invisible
+				hp1_1.setBackground(Color.black);
+				hp2_1.setBackground(Color.black);
+				hp3_1.setBackground(Color.black);
+				hp4_1.setBackground(Color.black);
+				hp5_1.setBackground(Color.black);
+				hp6_1.setBackground(Color.black);
+				hp7_1.setBackground(Color.black);
+				hp8_1.setBackground(Color.black);
+				hp9_1.setBackground(Color.black);
+				hp10_1.setBackground(Color.black);
 				// sets buttons to respective values
 				HP.setText("Yes");
 				run.setText("No");
+				// changes buttons as needed
 				ft.setVisible(false);
 				quit.setVisible(false);
+				enemy.setIcon(null);
+				Char.setIcon(null);
 				HP.addActionListener(new ActionListener() 
 				{
 					public void actionPerformed(ActionEvent e)
@@ -183,19 +314,48 @@ public class CS10FinalProject {
 						{
 							e1.printStackTrace();
 						}	
-						System.exit(0);
+						System.exit(0); // ends program
 					}
 				});
 				run.addActionListener(new ActionListener() 
 				{
 					public void actionPerformed(ActionEvent e)
 					{
-						
+						// sets background to fight scene 1
+						bg.setIcon(bg1);
+						// sets all hp bars to full
+						hp1.setBackground(Color.green);
+						hp2.setBackground(Color.green);
+						hp3.setBackground(Color.green);
+						hp4.setBackground(Color.green);
+						hp5.setBackground(Color.green);
+						hp6.setBackground(Color.green);
+						hp7.setBackground(Color.green);
+						hp8.setBackground(Color.green);
+						hp9.setBackground(Color.green);
+						hp10.setBackground(Color.green);
+						// sets all enemy hp bars to full
+						hp1_1.setBackground(Color.green);
+						hp2_1.setBackground(Color.green);
+						hp3_1.setBackground(Color.green);
+						hp4_1.setBackground(Color.green);
+						hp5_1.setBackground(Color.green);
+						hp6_1.setBackground(Color.green);
+						hp7_1.setBackground(Color.green);
+						hp8_1.setBackground(Color.green);
+						hp9_1.setBackground(Color.green);
+						hp10_1.setBackground(Color.green);
+						// makes characters appear
+						Char.setIcon(char1);
+						enemy.setIcon(enemy1);
+						// changes buttons as needed
+						ft.setVisible(true);
+						quit.setVisible(true);
+						HP.setText("HP Potion");
+						run.setText("Run");
 					}
 				});
 			}
 		});
-		quit.setBounds(180, 575, 120, 120);
-		frame.getContentPane().add(quit);
 	}
 }
