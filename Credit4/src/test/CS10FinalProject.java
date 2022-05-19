@@ -64,6 +64,8 @@ public class CS10FinalProject {
 		scrn.setLayout(null);
 		
 		JProgressBar health = new JProgressBar();
+		health.setBackground(Color.RED);
+		health.setForeground(Color.GREEN);
 		health.setBounds(55, 50, 146, 14);
 		scrn.add(health);
 		health.setVisible(false);
@@ -106,6 +108,20 @@ public class CS10FinalProject {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				HP.setText("Ability");
+				run.setText("Ability");
+				ft.setText("Ability");
+				quit.setText("Return");
+				quit.addActionListener(new ActionListener() 
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						HP.setText("HP Potion");
+						run.setText("Run");
+						ft.setText("Fight");
+						quit.setText("Quit");
+					}
+				});
 				
 			}
 		});
@@ -133,7 +149,7 @@ public class CS10FinalProject {
 			{
 				// makes health bar visible
 				health.setVisible(true);
-				health.setMinimum(100);
+				health.setValue(100);
 				// sets background to fight scene 1
 				bg.setIcon(bg1);
 				// makes characters appear
@@ -143,7 +159,6 @@ public class CS10FinalProject {
 				on.setVisible(false);
 			}
 		});
-
 		quit.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -158,6 +173,7 @@ public class CS10FinalProject {
 				quit.setVisible(false);
 				enemy.setIcon(null);
 				Char.setIcon(null);
+				health.setVisible(false);
 				HP.addActionListener(new ActionListener() 
 				{
 					public void actionPerformed(ActionEvent e)
@@ -191,10 +207,5 @@ public class CS10FinalProject {
 				});
 			}
 		});
-	}
-
-	private Rectangle Rectangle(double d, double e, Color red) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
