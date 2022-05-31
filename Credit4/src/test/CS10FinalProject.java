@@ -75,29 +75,37 @@ public class CS10FinalProject {
 		health2.setBounds(237, 198, 146, 14);
 		scrn.add(health2);
 		
+		JLabel Char = new JLabel("");
+		Char.setBounds(10, 28, 211, 225);
+		scrn.add(Char);
+		
+		JLabel enemy = new JLabel("");
+		enemy.setBounds(275, 10, 73, 169);
+		scrn.add(enemy);
+		
+		JLabel bg = new JLabel("");
+		bg.setBounds(5, 5, 410, 290);
+		scrn.add(bg);
+		
 		JButton yes = new JButton("Yes");
 		yes.setBounds(50, 505, 120, 120);
 		frame.getContentPane().add(yes);
-		
-		JButton ab1 = new JButton("Ability");
-		ab1.setBounds(50, 505, 120, 120);
-		frame.getContentPane().add(ab1);
 		
 		JButton no = new JButton("No");
 		no.setBounds(311, 505, 120, 120);
 		frame.getContentPane().add(no);
 
-		JLabel enemy = new JLabel("");
-		enemy.setBounds(275, 10, 73, 169);
-		scrn.add(enemy);
+		JButton ab1 = new JButton("Slash");
+		ab1.setBounds(180, 435, 120, 120);
+		frame.getContentPane().add(ab1);
 		
-		JLabel Char = new JLabel("");
-		Char.setBounds(10, 28, 211, 225);
-		scrn.add(Char);
+		JButton ab2 = new JButton("Shield");
+		ab2.setBounds(50, 505, 120, 120);
+		frame.getContentPane().add(ab2);
 		
-		JLabel bg = new JLabel("");
-		bg.setBounds(5, 5, 410, 290);
-		scrn.add(bg);
+		JButton ab3 = new JButton("New button");
+		ab3.setBounds(311, 505, 120, 120);
+		frame.getContentPane().add(ab3);
 		
 		JButton HP = new JButton("HP Potion");
 		HP.setBounds(50, 505, 120, 120);
@@ -127,6 +135,8 @@ public class CS10FinalProject {
 		health2.setVisible(false);
 		yes.setVisible(false);
 		ab1.setVisible(false);
+		ab2.setVisible(false);
+		ab3.setVisible(false);
 		no.setVisible(false);
 		ft.setVisible(false);
 		HP.setVisible(false);
@@ -171,17 +181,10 @@ public class CS10FinalProject {
 				ft.setVisible(false);
 				quit.setVisible(false);
 				// makes fight buttons visible
+				ab1.setVisible(true);
+				ab2.setVisible(true);
+				ab3.setVisible(true);
 				rtrn.setVisible(true);
-				quit.addActionListener(new ActionListener()
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						HP.setText("HP Potion");
-						run.setText("Run");
-						ft.setText("Fight");
-						quit.setText("Quit");
-					}
-				});
 			}
 		});
 		
@@ -211,6 +214,9 @@ public class CS10FinalProject {
 				HP.setVisible(true);
 				run.setVisible(true);
 				// makes fight buttons invisible
+				ab1.setVisible(false);
+				ab2.setVisible(false);
+				ab3.setVisible(false);
 				rtrn.setVisible(false);
 			}
 		});
@@ -229,6 +235,7 @@ public class CS10FinalProject {
 				enemy.setIcon(null);
 				Char.setIcon(null);
 				health.setVisible(false);
+				health2.setVisible(false);
 				no.setVisible(true);
 				yes.setVisible(true);
 			}
