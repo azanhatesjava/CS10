@@ -68,10 +68,27 @@ public class CS10FinalProject {
 		health.setForeground(Color.GREEN);
 		health.setBounds(55, 50, 146, 14);
 		scrn.add(health);
-		health.setVisible(false);
 		
+		JProgressBar health2 = new JProgressBar();
+		health2.setBackground(Color.RED);
+		health2.setForeground(Color.GREEN);
+		health2.setBounds(237, 198, 146, 14);
+		scrn.add(health2);
+		
+		JButton yes = new JButton("Yes");
+		yes.setBounds(50, 505, 120, 120);
+		frame.getContentPane().add(yes);
+		
+		JButton ab1 = new JButton("Ability");
+		ab1.setBounds(50, 505, 120, 120);
+		frame.getContentPane().add(ab1);
+		
+		JButton no = new JButton("No");
+		no.setBounds(311, 505, 120, 120);
+		frame.getContentPane().add(no);
+
 		JLabel enemy = new JLabel("");
-		enemy.setBounds(300, 15, 73, 169);
+		enemy.setBounds(275, 10, 73, 169);
 		scrn.add(enemy);
 		
 		JLabel Char = new JLabel("");
@@ -102,17 +119,60 @@ public class CS10FinalProject {
 		quit.setBounds(180, 575, 120, 120);
 		frame.getContentPane().add(quit);
 		
+		JButton rtrn = new JButton("Return");
+		rtrn.setBounds(180, 575, 120, 120);
+		frame.getContentPane().add(rtrn);
 		
+		health.setVisible(false);
+		health2.setVisible(false);
+		yes.setVisible(false);
+		ab1.setVisible(false);
+		no.setVisible(false);
+		ft.setVisible(false);
+		HP.setVisible(false);
+		run.setVisible(false);
+		quit.setVisible(false);
+		rtrn.setVisible(false);
 		
-		ft.addActionListener(new ActionListener() 
+		int hp = 100;
+		int hp2 = 100;
+		
+		on.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				HP.setText("Ability");
-				run.setText("Ability");
-				ft.setText("Ability");
-				quit.setText("Return");
-				quit.addActionListener(new ActionListener() 
+				// makes health bar visible
+				health.setVisible(true);
+				health.setValue(hp);
+				health2.setVisible(true);
+				health2.setValue(hp2);
+				// sets background to fight scene 1
+				bg.setIcon(bg1);
+				// makes characters appear
+				Char.setIcon(char1);
+				enemy.setIcon(enemy1);
+				// gets rid of on button
+				on.setVisible(false);
+				//makes other buttons visible
+				ft.setVisible(true);
+				run.setVisible(true);
+				quit.setVisible(true);
+				HP.setVisible(true);
+			}
+		});
+		
+		ft.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				// makes main buttons invisible
+				HP.setVisible(false);
+				run.setVisible(false);
+				ft.setVisible(false);
+				quit.setVisible(false);
+				// makes fight buttons visible
+				rtrn.setVisible(true);
+				quit.addActionListener(new ActionListener()
 				{
 					public void actionPerformed(ActionEvent e)
 					{
@@ -122,11 +182,9 @@ public class CS10FinalProject {
 						quit.setText("Quit");
 					}
 				});
-				
 			}
 		});
 		
-
 		run.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -139,73 +197,81 @@ public class CS10FinalProject {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				HP.setText("test");
+				
 			}
 		});
 		
-		on.addActionListener(new ActionListener() 
+		rtrn.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				// makes health bar visible
-				health.setVisible(true);
-				health.setValue(100);
-				// sets background to fight scene 1
-				bg.setIcon(bg1);
-				// makes characters appear
-				Char.setIcon(char1);
-				enemy.setIcon(enemy1);
-				// gets rid of on button
-				on.setVisible(false);
+				// makes main buttons visible
+				ft.setVisible(true);
+				quit.setVisible(true);
+				HP.setVisible(true);
+				run.setVisible(true);
+				// makes fight buttons invisible
+				rtrn.setVisible(false);
 			}
 		});
+		
 		quit.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				// sets bg to quit screen
 				bg.setIcon(quit1);
-				// sets buttons to respective values
-				HP.setText("Yes");
-				run.setText("No");
 				// changes buttons as needed
+				HP.setVisible(false);
+				run.setVisible(false);
 				ft.setVisible(false);
 				quit.setVisible(false);
 				enemy.setIcon(null);
 				Char.setIcon(null);
 				health.setVisible(false);
-				HP.addActionListener(new ActionListener() 
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						//puts program to sleep
-						try 
-						{
-							Thread.sleep(1500);
-						} catch (InterruptedException e1) 
-						{
-							e1.printStackTrace();
-						}	
-						System.exit(0); // ends program
-					}
-				});
-				run.addActionListener(new ActionListener() 
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-						// sets background to fight scene 1
-						bg.setIcon(bg1);
-						// makes characters appear
-						Char.setIcon(char1);
-						enemy.setIcon(enemy1);
-						// changes buttons as needed
-						ft.setVisible(true);
-						quit.setVisible(true);
-						HP.setText("HP Potion");
-						run.setText("Run");
-					}
-				});
+				no.setVisible(true);
+				yes.setVisible(true);
 			}
 		});
+		
+		yes.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				//puts program to sleep
+				try 
+				{
+					Thread.sleep(1500);
+				} catch (InterruptedException e1) 
+				{
+					e1.printStackTrace();
+				}	
+				System.exit(0); // ends program	
+			}
+		});
+		
+		no.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				// sets background to fight scene 1
+				bg.setIcon(bg1);
+				// makes characters appear
+				Char.setIcon(char1);
+				enemy.setIcon(enemy1);
+				// makes main buttons visible
+				ft.setVisible(true);
+				quit.setVisible(true);
+				HP.setVisible(true);
+				run.setVisible(true);
+				// makes hp bars visible
+				health.setVisible(true);
+				health2.setVisible(true);
+				// makes confirmation buttons invisible
+				no.setVisible(false);
+				yes.setVisible(false);
+			}
+		});
+		
 	}
 }
