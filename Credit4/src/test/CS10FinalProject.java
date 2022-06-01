@@ -10,6 +10,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -24,6 +26,7 @@ public class CS10FinalProject {
 	ImageIcon quit1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit1.png");
 	ImageIcon char1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\char.png");
 	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\enemy.png");
+	ImageIcon slash = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\Slash.png");
 	
 	/**
 	 * Launch the application.
@@ -74,6 +77,10 @@ public class CS10FinalProject {
 		health2.setForeground(Color.GREEN);
 		health2.setBounds(237, 198, 146, 14);
 		scrn.add(health2);
+		
+		JLabel effect = new JLabel("");
+		effect.setBounds(110, 37, 180, 222);
+		scrn.add(effect);
 		
 		JLabel Char = new JLabel("");
 		Char.setBounds(10, 28, 211, 225);
@@ -144,18 +151,15 @@ public class CS10FinalProject {
 		quit.setVisible(false);
 		rtrn.setVisible(false);
 		
-		int hp = 100;
-		int hp2 = 100;
-		
 		on.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				// makes health bar visible
 				health.setVisible(true);
-				health.setValue(hp);
+				health.setValue(100);
 				health2.setVisible(true);
-				health2.setValue(hp2);
+				health2.setValue(100);
 				// sets background to fight scene 1
 				bg.setIcon(bg1);
 				// makes characters appear
@@ -168,6 +172,21 @@ public class CS10FinalProject {
 				run.setVisible(true);
 				quit.setVisible(true);
 				HP.setVisible(true);
+			}
+		});
+		
+		run.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+			}
+		});
+		
+		HP.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
 			}
 		});
 		
@@ -187,19 +206,54 @@ public class CS10FinalProject {
 				rtrn.setVisible(true);
 			}
 		});
-		
-		run.addActionListener(new ActionListener() 
+		ab1.addActionListener(new ActionListener() 
 		{
+			
 			public void actionPerformed(ActionEvent e) 
-			{
-				
-			}
-		});
-		
-		HP.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
+			{	
+				int hp = health2.getValue();
+				if (hp != 100)
+				{
+					int hp2 = hp;
+					effect.setIcon(slash);
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							effect.setIcon(null);
+						}
+					};
+							
+					timer.schedule(task, 900);	
+					
+					//sets damage range from 10 - 20%
+					int dmg = 11 + (int)(Math.random()*10);
+					hp2 = hp2 - dmg;
+					health2.setValue(hp2);
+				}
+				else
+				{
+					int hp2 = 100;
+					effect.setIcon(slash);
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							effect.setIcon(null);
+						}
+					};
+							
+					timer.schedule(task, 900);	
+					
+					//sets damage range from 10 - 20%
+					int dmg = 11 + (int)(Math.random()*10);
+					hp2 = hp2 - dmg;
+					health2.setValue(hp2);
+				}
 				
 			}
 		});
