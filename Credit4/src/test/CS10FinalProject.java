@@ -211,10 +211,10 @@ public class CS10FinalProject {
 			
 			public void actionPerformed(ActionEvent e) 
 			{	
-				int hp = health2.getValue();
-				if (hp != 100)
+				int hp2 = health2.getValue();
+				if (hp2 != 100)
 				{
-					int hp2 = hp;
+					int hp2_1 = hp2;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -235,7 +235,7 @@ public class CS10FinalProject {
 				}
 				else
 				{
-					int hp2 = 100;
+					int hp2_1 = 100;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -255,7 +255,51 @@ public class CS10FinalProject {
 					health2.setValue(hp2);
 				}
 				
+				int hp1 = health2.getValue();
+				if (hp1 != 100)
+				{
+					int hp1_1 = hp1;
+					effect.setIcon(slash);
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							effect.setIcon(null);
+						}
+					};
+							
+					timer.schedule(task, 900);	
+					
+					//sets damage range from 10 - 20%
+					int dmg = 11 + (int)(Math.random()*10);
+					hp1 = hp1 - dmg;
+					health.setValue(hp1);
+				}
+				else
+				{
+					int hp1_1 = 100;
+					effect.setIcon(slash);
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							effect.setIcon(null);
+						}
+					};
+							
+					timer.schedule(task, 900);	
+					
+					//sets damage range from 10 - 20%
+					int dmg = 11 + (int)(Math.random()*10);
+					hp1 = hp1 - dmg;
+					health.setValue(hp1);
+				}
 			}
+			
 		});
 		
 		rtrn.addActionListener(new ActionListener() 
