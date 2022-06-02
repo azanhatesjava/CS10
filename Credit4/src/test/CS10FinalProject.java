@@ -237,7 +237,6 @@ public class CS10FinalProject {
 				};
 						
 				timer.schedule(task, 900);						
-				c
 				hp2 = hp2 - dmg1;
 				hp1 = hp1 - dmg2;
 				health2.setValue(hp2);
