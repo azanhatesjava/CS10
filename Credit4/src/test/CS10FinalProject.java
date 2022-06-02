@@ -17,19 +17,21 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 import javax.swing.JProgressBar;
+import javax.swing.SwingConstants;
 
 public class CS10FinalProject {
 
 	private JFrame frame;
 
-	ImageIcon bg1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\bg1.png");
-	ImageIcon quit1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit1.png");
-	ImageIcon quit2 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit2.png");
-	ImageIcon dead =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\dead.jpg");
-	ImageIcon win =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\win.jpg");
-	ImageIcon char1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\char.png");
-	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\enemy.png");
-	ImageIcon slash = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\slash.png");
+	ImageIcon bg1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\bg1.png");
+	ImageIcon quit1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit1.png");
+	ImageIcon quit2 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit2.png");
+	ImageIcon dead =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\dead.jpg");
+	ImageIcon win =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\win.png");
+	ImageIcon char1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\char.png");
+	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\enemy.png");
+	ImageIcon slash = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\slash.png");
+	ImageIcon BlueBullet = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\BlueBullet.png");
 	
 	/**
 	 * Launch the application.
@@ -85,13 +87,24 @@ public class CS10FinalProject {
 		health2.setBounds(237, 198, 146, 14);
 		scrn.add(health2);
 		
-		JLabel effect = new JLabel("");
-		effect.setBounds(110, 37, 180, 222);
-		scrn.add(effect);
+		JProgressBar mana = new JProgressBar();
+		mana.setValue(50);
+		mana.setBackground(Color.LIGHT_GRAY);
+		mana.setForeground(Color.CYAN);
+		mana.setBounds(55, 63, 146, 5);
+		scrn.add(mana);
+		
+		JLabel BBeffect = new JLabel("");
+		BBeffect.setBounds(127, 11, 180, 222);
+		scrn.add(BBeffect);
 		
 		JLabel Char = new JLabel("");
 		Char.setBounds(10, 28, 211, 225);
 		scrn.add(Char);
+		
+		JLabel effect = new JLabel("");
+		effect.setBounds(110, 37, 180, 222);
+		scrn.add(effect);
 		
 		JLabel enemy = new JLabel("");
 		enemy.setBounds(275, 10, 73, 169);
