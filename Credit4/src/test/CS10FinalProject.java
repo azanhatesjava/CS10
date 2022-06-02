@@ -24,9 +24,12 @@ public class CS10FinalProject {
 
 	ImageIcon bg1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\bg1.png");
 	ImageIcon quit1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit1.png");
+	ImageIcon quit2 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit2.png");
+	ImageIcon dead =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\dead.jpg");
+	ImageIcon win =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\win.jpg");
 	ImageIcon char1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\char.png");
 	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\enemy.png");
-	ImageIcon slash = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\Slash.png");
+	ImageIcon slash = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\slash.png");
 	
 	/**
 	 * Launch the application.
@@ -67,12 +70,16 @@ public class CS10FinalProject {
 		scrn.setLayout(null);
 		
 		JProgressBar health = new JProgressBar();
+		health.setValue(100);
+		health.setStringPainted(true);
 		health.setBackground(Color.RED);
 		health.setForeground(Color.GREEN);
 		health.setBounds(55, 50, 146, 14);
 		scrn.add(health);
 		
 		JProgressBar health2 = new JProgressBar();
+		health2.setValue(100);
+		health2.setStringPainted(true);
 		health2.setBackground(Color.RED);
 		health2.setForeground(Color.GREEN);
 		health2.setBounds(237, 198, 146, 14);
@@ -157,9 +164,7 @@ public class CS10FinalProject {
 			{
 				// makes health bar visible
 				health.setVisible(true);
-				health.setValue(100);
 				health2.setVisible(true);
-				health2.setValue(100);
 				// sets background to fight scene 1
 				bg.setIcon(bg1);
 				// makes characters appear
@@ -186,7 +191,9 @@ public class CS10FinalProject {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				int hp1 = health.getValue();
+				hp1 = hp1 + 40;
+				health.setValue(hp1);
 			}
 		});
 		
@@ -214,6 +221,11 @@ public class CS10FinalProject {
 				//sets damage range from 10 - 20%
 				int dmg1 = 11 + (int)(Math.random()*10);
 				int hp2 = health2.getValue();
+				
+				//sets damage range from 10 - 20%
+				int dmg2 = 11 + (int)(Math.random()*10);
+				int hp1 = health.getValue();
+				
 				if (hp2 != 100)
 				{
 					effect.setIcon(slash);
@@ -251,9 +263,6 @@ public class CS10FinalProject {
 					health2.setValue(hp2);
 				}
 				
-				//sets damage range from 10 - 20%
-				int dmg2 = 11 + (int)(Math.random()*10);
-				int hp1 = health.getValue();
 				if (hp1 != 100)
 				{
 					effect.setIcon(slash);
@@ -290,7 +299,67 @@ public class CS10FinalProject {
 					hp1 = hp1 - dmg2;
 					health.setValue(hp1);
 				}
+				
+				if (hp1 <= 0)
+				{
+					bg.setIcon(dead);
+					HP.setVisible(false);
+					run.setVisible(false);
+					ft.setVisible(false);
+					quit.setVisible(false);
+					enemy.setIcon(null);
+					Char.setIcon(null);
+					effect.setIcon(null);
+					health.setVisible(false);
+					health2.setVisible(false);
+					ab1.setVisible(false);
+					ab2.setVisible(false);
+					ab3.setVisible(false);
+					rtrn.setVisible(false);
+					
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							System.exit(0);
+						}
+					};
+							
+					timer.schedule(task, 1500);
+				}
+				else if (hp2 <=0)
+				{
+					bg.setIcon(win);
+					HP.setVisible(false);
+					run.setVisible(false);
+					ft.setVisible(false);
+					quit.setVisible(false);
+					enemy.setIcon(null);
+					Char.setIcon(null);
+					effect.setIcon(null);
+					health.setVisible(false);
+					health2.setVisible(false);
+					ab1.setVisible(false);
+					ab2.setVisible(false);
+					ab3.setVisible(false);
+					rtrn.setVisible(false);
+					
+					Timer timer = new Timer();
+					
+					TimerTask task = new TimerTask() 
+					{
+						public void run() 
+						{
+							System.exit(0);
+						}
+					};
+							
+					timer.schedule(task, 1500);
+				}
 			}
+			
 			
 		});
 		
@@ -335,15 +404,18 @@ public class CS10FinalProject {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				//puts program to sleep
-				try 
+				bg.setIcon(quit2);
+				Timer timer = new Timer();
+				
+				TimerTask task = new TimerTask() 
 				{
-					Thread.sleep(1500);
-				} catch (InterruptedException e1) 
-				{
-					e1.printStackTrace();
-				}	
-				System.exit(0); // ends program	
+					public void run() 
+					{
+						System.exit(0);
+					}
+				};
+						
+				timer.schedule(task, 1500);	
 			}
 		});
 		
