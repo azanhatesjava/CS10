@@ -22,11 +22,11 @@ public class CS10FinalProject {
 
 	private JFrame frame;
 
-	ImageIcon bg1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\bg1.png");
-	ImageIcon quit1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit1.png");
-	ImageIcon char1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\char.png");
-	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\enemy.png");
-	ImageIcon slash = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\Slash.png");
+	ImageIcon bg1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\bg1.png");
+	ImageIcon quit1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit1.png");
+	ImageIcon char1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\char.png");
+	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\enemy.png");
+	ImageIcon slash = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\Slash.png");
 	
 	/**
 	 * Launch the application.
@@ -211,10 +211,11 @@ public class CS10FinalProject {
 			
 			public void actionPerformed(ActionEvent e) 
 			{	
+				//sets damage range from 10 - 20%
+				int dmg1 = 11 + (int)(Math.random()*10);
 				int hp2 = health2.getValue();
 				if (hp2 != 100)
 				{
-					int hp2_1 = hp2;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -228,14 +229,11 @@ public class CS10FinalProject {
 							
 					timer.schedule(task, 900);	
 					
-					//sets damage range from 10 - 20%
-					int dmg = 11 + (int)(Math.random()*10);
-					hp2 = hp2 - dmg;
+					hp2 = hp2 - dmg1;
 					health2.setValue(hp2);
 				}
 				else
 				{
-					int hp2_1 = 100;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -249,16 +247,15 @@ public class CS10FinalProject {
 							
 					timer.schedule(task, 900);	
 					
-					//sets damage range from 10 - 20%
-					int dmg = 11 + (int)(Math.random()*10);
-					hp2 = hp2 - dmg;
+					hp2 = hp2 - dmg1;
 					health2.setValue(hp2);
 				}
 				
-				int hp1 = health2.getValue();
+				//sets damage range from 10 - 20%
+				int dmg2 = 11 + (int)(Math.random()*10);
+				int hp1 = health.getValue();
 				if (hp1 != 100)
 				{
-					int hp1_1 = hp1;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -272,14 +269,11 @@ public class CS10FinalProject {
 							
 					timer.schedule(task, 900);	
 					
-					//sets damage range from 10 - 20%
-					int dmg = 11 + (int)(Math.random()*10);
-					hp1 = hp1 - dmg;
+					hp1 = hp1 - dmg2;
 					health.setValue(hp1);
 				}
 				else
 				{
-					int hp1_1 = 100;
 					effect.setIcon(slash);
 					Timer timer = new Timer();
 					
@@ -293,9 +287,7 @@ public class CS10FinalProject {
 							
 					timer.schedule(task, 900);	
 					
-					//sets damage range from 10 - 20%
-					int dmg = 11 + (int)(Math.random()*10);
-					hp1 = hp1 - dmg;
+					hp1 = hp1 - dmg2;
 					health.setValue(hp1);
 				}
 			}
