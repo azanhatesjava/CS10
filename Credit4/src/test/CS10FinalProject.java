@@ -226,79 +226,22 @@ public class CS10FinalProject {
 				int dmg2 = 11 + (int)(Math.random()*10);
 				int hp1 = health.getValue();
 				
-				if (hp2 != 100)
+				effect.setIcon(slash);
+				Timer timer = new Timer();					
+				TimerTask task = new TimerTask() 
 				{
-					effect.setIcon(slash);
-					Timer timer = new Timer();
-					
-					TimerTask task = new TimerTask() 
+					public void run() 
 					{
-						public void run() 
-						{
-							effect.setIcon(null);
-						}
-					};
-							
-					timer.schedule(task, 900);	
-					
-					hp2 = hp2 - dmg1;
-					health2.setValue(hp2);
-				}
-				else
-				{
-					effect.setIcon(slash);
-					Timer timer = new Timer();
-					
-					TimerTask task = new TimerTask() 
-					{
-						public void run() 
-						{
-							effect.setIcon(null);
-						}
-					};
-							
-					timer.schedule(task, 900);	
-					
-					hp2 = hp2 - dmg1;
-					health2.setValue(hp2);
-				}
-				
-				if (hp1 != 100)
-				{
-					effect.setIcon(slash);
-					Timer timer = new Timer();
-					
-					TimerTask task = new TimerTask() 
-					{
-						public void run() 
-						{
-							effect.setIcon(null);
-						}
-					};
-							
-					timer.schedule(task, 900);	
-					
-					hp1 = hp1 - dmg2;
-					health.setValue(hp1);
-				}
-				else
-				{
-					effect.setIcon(slash);
-					Timer timer = new Timer();
-					
-					TimerTask task = new TimerTask() 
-					{
-						public void run() 
-						{
-							effect.setIcon(null);
-						}
-					};
-							
-					timer.schedule(task, 900);	
-					
-					hp1 = hp1 - dmg2;
-					health.setValue(hp1);
-				}
+						effect.setIcon(null);
+					}
+				};
+						
+				timer.schedule(task, 900);						
+				c
+				hp2 = hp2 - dmg1;
+				hp1 = hp1 - dmg2;
+				health2.setValue(hp2);
+				health.setValue(hp1);
 				
 				if (hp1 <= 0)
 				{
@@ -317,9 +260,9 @@ public class CS10FinalProject {
 					ab3.setVisible(false);
 					rtrn.setVisible(false);
 					
-					Timer timer = new Timer();
+					Timer timer1 = new Timer();
 					
-					TimerTask task = new TimerTask() 
+					TimerTask task1 = new TimerTask() 
 					{
 						public void run() 
 						{
@@ -327,7 +270,7 @@ public class CS10FinalProject {
 						}
 					};
 							
-					timer.schedule(task, 1500);
+					timer1.schedule(task1, 1500);
 				}
 				else if (hp2 <=0)
 				{
@@ -346,9 +289,9 @@ public class CS10FinalProject {
 					ab3.setVisible(false);
 					rtrn.setVisible(false);
 					
-					Timer timer = new Timer();
+					Timer timer1 = new Timer();
 					
-					TimerTask task = new TimerTask() 
+					TimerTask task1 = new TimerTask() 
 					{
 						public void run() 
 						{
@@ -356,7 +299,7 @@ public class CS10FinalProject {
 						}
 					};
 							
-					timer.schedule(task, 1500);
+					timer1.schedule(task1, 1500);
 				}
 			}
 			
