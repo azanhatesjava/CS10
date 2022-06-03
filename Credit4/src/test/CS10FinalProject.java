@@ -23,15 +23,16 @@ public class CS10FinalProject {
 
 	private JFrame frame;
 
-	ImageIcon bg1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\bg1.png");
-	ImageIcon quit1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit1.png");
-	ImageIcon quit2 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\quit2.png");
-	ImageIcon dead =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\dead.jpg");
-	ImageIcon win =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\win.png");
-	ImageIcon char1 = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\char.png");
-	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\enemy.png");
-	ImageIcon slash = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\slash.png");
-	ImageIcon BlueBullet = new ImageIcon("C:\\Users\\16365506\\git\\CS10\\Credit5\\src\\BlueBullet.png");
+	ImageIcon bg1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\bg1.png");
+	ImageIcon quit1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit1.png");
+	ImageIcon quit2 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\quit2.png");
+	ImageIcon dead =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\dead.jpg");
+	ImageIcon win =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\win.png");
+	ImageIcon run = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\run.png");
+	ImageIcon char1 = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\char.png");
+	ImageIcon enemy1 =  new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\enemy.png");
+	ImageIcon slash = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\slash.png");
+	ImageIcon BlueBullet = new ImageIcon("C:\\Users\\drago\\git\\CS10\\Credit5\\src\\BlueBullet.png");
 	
 	/**
 	 * Launch the application.
@@ -77,6 +78,7 @@ public class CS10FinalProject {
 		health.setBackground(Color.RED);
 		health.setForeground(Color.GREEN);
 		health.setBounds(55, 50, 146, 14);
+		health.setVisible(false);
 		scrn.add(health);
 		
 		JProgressBar health2 = new JProgressBar();
@@ -85,6 +87,7 @@ public class CS10FinalProject {
 		health2.setBackground(Color.RED);
 		health2.setForeground(Color.GREEN);
 		health2.setBounds(237, 198, 146, 14);
+		health2.setVisible(false);
 		scrn.add(health2);
 		
 		JProgressBar mana = new JProgressBar();
@@ -92,6 +95,7 @@ public class CS10FinalProject {
 		mana.setBackground(Color.LIGHT_GRAY);
 		mana.setForeground(Color.CYAN);
 		mana.setBounds(55, 63, 146, 5);
+		mana.setVisible(false);
 		scrn.add(mana);
 		
 		JLabel BBeffect = new JLabel("");
@@ -130,9 +134,29 @@ public class CS10FinalProject {
 		ab2.setBounds(50, 505, 120, 120);
 		frame.getContentPane().add(ab2);
 		
-		JButton ab3 = new JButton("New button");
+		JButton ab3 = new JButton("Spells");
 		ab3.setBounds(311, 505, 120, 120);
 		frame.getContentPane().add(ab3);
+		
+		JButton rtrn = new JButton("Return");
+		rtrn.setBounds(180, 575, 120, 120);
+		frame.getContentPane().add(rtrn);
+		
+		JButton sp1 = new JButton("Spell 1");
+		sp1.setBounds(180, 435, 120, 120);
+		frame.getContentPane().add(sp1);
+		
+		JButton sp2 = new JButton("Spell 2");
+		sp2.setBounds(50, 505, 120, 120);
+		frame.getContentPane().add(sp2);
+		
+		JButton sp3 = new JButton("Spell 3");
+		sp3.setBounds(311, 505, 120, 120);
+		frame.getContentPane().add(sp3);
+		
+		JButton rtrn2 = new JButton("Return");
+		rtrn2.setBounds(180, 575, 120, 120);
+		frame.getContentPane().add(rtrn2);
 		
 		JButton HP = new JButton("HP Potion");
 		HP.setBounds(50, 505, 120, 120);
@@ -142,24 +166,23 @@ public class CS10FinalProject {
 		ft.setBounds(180, 435, 120, 120);
 		frame.getContentPane().add(ft);
 		
-		JButton run = new JButton("Run");
-		run.setBounds(311, 505, 120, 120);
-		frame.getContentPane().add(run);
+		JButton rn = new JButton("Run");
+		rn.setBounds(311, 505, 120, 120);
+		frame.getContentPane().add(rn);
 		
 		JButton on = new JButton("ON");
 		on.setBounds(356, 363, 90, 23);
 		frame.getContentPane().add(on);
 		
-		JButton quit = new JButton("Quit");
-		quit.setBounds(180, 575, 120, 120);
-		frame.getContentPane().add(quit);
+		JButton qt = new JButton("Quit");
+		qt.setBounds(180, 575, 120, 120);
+		frame.getContentPane().add(qt);
+
+		JButton usedHP = new JButton("HP Potion");
+		usedHP.setBackground(Color.LIGHT_GRAY);
+		usedHP.setBounds(50, 505, 120, 120);
+		frame.getContentPane().add(usedHP);
 		
-		JButton rtrn = new JButton("Return");
-		rtrn.setBounds(180, 575, 120, 120);
-		frame.getContentPane().add(rtrn);
-		
-		health.setVisible(false);
-		health2.setVisible(false);
 		yes.setVisible(false);
 		ab1.setVisible(false);
 		ab2.setVisible(false);
@@ -167,9 +190,14 @@ public class CS10FinalProject {
 		no.setVisible(false);
 		ft.setVisible(false);
 		HP.setVisible(false);
-		run.setVisible(false);
-		quit.setVisible(false);
+		usedHP.setVisible(false);
+		rn.setVisible(false);
+		qt.setVisible(false);
 		rtrn.setVisible(false);
+		sp1.setVisible(false);
+		sp2.setVisible(false);
+		sp3.setVisible(false);
+		rtrn2.setVisible(false);
 		
 		on.addActionListener(new ActionListener() 
 		{
@@ -178,6 +206,7 @@ public class CS10FinalProject {
 				// makes health bar visible
 				health.setVisible(true);
 				health2.setVisible(true);
+				mana.setVisible(true);
 				// sets background to fight scene 1
 				bg.setIcon(bg1);
 				// makes characters appear
@@ -187,16 +216,89 @@ public class CS10FinalProject {
 				on.setVisible(false);
 				//makes other buttons visible
 				ft.setVisible(true);
-				run.setVisible(true);
-				quit.setVisible(true);
+				rn.setVisible(true);
+				qt.setVisible(true);
 				HP.setVisible(true);
+				usedHP.setVisible(true);
 			}
 		});
 		
-		run.addActionListener(new ActionListener() 
+		rn.addActionListener(new ActionListener() 
 		{
+			
 			public void actionPerformed(ActionEvent e) 
 			{
+				bg.setIcon(run);
+				HP.setVisible(false);
+				usedHP.setVisible(false);
+				rn.setVisible(false);
+				ft.setVisible(false);
+				qt.setVisible(false);
+				enemy.setIcon(null);
+				Char.setIcon(null);
+				health.setVisible(false);
+				health2.setVisible(false);
+				mana.setVisible(false);
+				Timer timer = new Timer();					
+				TimerTask task = new TimerTask() 
+				{
+					public void run() 
+					{
+						int hp = health.getValue();
+						hp = hp - 50;
+						health.setValue(hp);
+						// sets background to fight scene 1
+						bg.setIcon(bg1);
+						// makes characters appear
+						Char.setIcon(char1);
+						enemy.setIcon(enemy1);
+						// makes main buttons visible
+						ft.setVisible(true);
+						qt.setVisible(true);
+						HP.setVisible(true);
+						usedHP.setVisible(true);
+						rn.setVisible(true);
+						// makes hp bars visible
+						health.setVisible(true);
+						health2.setVisible(true);
+						
+						int hp1 = health.getValue();
+						
+						if (hp1 <= 0)
+						{
+							bg.setIcon(dead);
+							HP.setVisible(false);
+							usedHP.setVisible(false);
+							rn.setVisible(false);
+							ft.setVisible(false);
+							qt.setVisible(false);
+							enemy.setIcon(null);
+							Char.setIcon(null);
+							effect.setIcon(null);
+							health.setVisible(false);
+							health2.setVisible(false);
+							ab1.setVisible(false);
+							ab2.setVisible(false);
+							ab3.setVisible(false);
+							rtrn.setVisible(false);
+							mana.setVisible(false);
+							
+							Timer deathtimer = new Timer();
+							
+							TimerTask death = new TimerTask() 
+							{
+								public void run() 
+								{
+									System.exit(0);
+								}
+							};
+									
+							deathtimer.schedule(death, 1500);
+						}
+					}
+				};
+				timer.schedule(task, 1500);	
+				
 			}
 		});
 		
@@ -207,6 +309,7 @@ public class CS10FinalProject {
 				int hp1 = health.getValue();
 				hp1 = hp1 + 40;
 				health.setValue(hp1);
+				frame.remove(HP);
 			}
 		});
 		
@@ -216,9 +319,10 @@ public class CS10FinalProject {
 			{
 				// makes main buttons invisible
 				HP.setVisible(false);
-				run.setVisible(false);
+				usedHP.setVisible(false);
+				rn.setVisible(false);
 				ft.setVisible(false);
-				quit.setVisible(false);
+				qt.setVisible(false);
 				// makes fight buttons visible
 				ab1.setVisible(true);
 				ab2.setVisible(true);
@@ -234,63 +338,107 @@ public class CS10FinalProject {
 				//sets damage range from 10 - 20%
 				int dmg1 = 11 + (int)(Math.random()*10);
 				int hp2 = health2.getValue();
+				int mana1 = mana.getValue();
 				
-				//sets damage range from 10 - 20%
-				int dmg2 = 11 + (int)(Math.random()*10);
-				int hp1 = health.getValue();
+				mana1 = mana1 + 10;
+				mana.setValue(mana1);
+				
+				hp2 = hp2 - dmg1;
+				health2.setValue(hp2);
 				
 				effect.setIcon(slash);
+				
+				Timer timerWait = new Timer();					
+				TimerTask taskWait = new TimerTask() 
+				{
+					public void run() 
+					{
+						int dmg2 = 11 + (int)(Math.random()*10);
+						int hp1 = health.getValue();
+						hp1 = hp1 - dmg2;
+						health.setValue(hp1);
+						BBeffect.setIcon(BlueBullet);
+						
+						if (hp1 <= 0)
+						{
+							bg.setIcon(dead);
+							HP.setVisible(false);
+							usedHP.setVisible(false);
+							rn.setVisible(false);
+							ft.setVisible(false);
+							qt.setVisible(false);
+							enemy.setIcon(null);
+							Char.setIcon(null);
+							BBeffect.setIcon(null);
+							health.setVisible(false);
+							health2.setVisible(false);
+							ab1.setVisible(false);
+							ab2.setVisible(false);
+							ab3.setVisible(false);
+							rtrn.setVisible(false);
+							mana.setVisible(false);
+							
+							Timer deathtimer = new Timer();
+							
+							TimerTask death = new TimerTask() 
+							{
+								public void run() 
+								{
+									System.exit(0);
+								}
+							};
+									
+							deathtimer.schedule(death, 900);
+						}
+						
+						Timer timer = new Timer();					
+						TimerTask task = new TimerTask() 
+						{
+							public void run() 
+							{
+								BBeffect.setIcon(null);
+
+								HP.setVisible(true);
+								usedHP.setVisible(true);
+								ft.setVisible(true);
+								rn.setVisible(true);	
+								qt.setVisible(true);
+								
+							}
+						};
+						//timer for enemy attack disappear		
+						timer.schedule(task, 900);	
+					}
+				};
+				
+				rtrn.setVisible(false);
+				ab1.setVisible(false);
+				ab2.setVisible(false);
+				ab3.setVisible(false);
+				
+				//Timer for enemy attack		
+				timerWait.schedule(taskWait, 1600);			
+
 				Timer timer = new Timer();					
 				TimerTask task = new TimerTask() 
 				{
 					public void run() 
 					{
 						effect.setIcon(null);
+						
 					}
 				};
-						
-				timer.schedule(task, 900);						
-				hp2 = hp2 - dmg1;
-				hp1 = hp1 - dmg2;
-				health2.setValue(hp2);
-				health.setValue(hp1);
+				//timer for sprite attack disappear			
+				timer.schedule(task, 900);
 				
-				if (hp1 <= 0)
-				{
-					bg.setIcon(dead);
-					HP.setVisible(false);
-					run.setVisible(false);
-					ft.setVisible(false);
-					quit.setVisible(false);
-					enemy.setIcon(null);
-					Char.setIcon(null);
-					effect.setIcon(null);
-					health.setVisible(false);
-					health2.setVisible(false);
-					ab1.setVisible(false);
-					ab2.setVisible(false);
-					ab3.setVisible(false);
-					rtrn.setVisible(false);
-					
-					Timer timer1 = new Timer();
-					
-					TimerTask task1 = new TimerTask() 
-					{
-						public void run() 
-						{
-							System.exit(0);
-						}
-					};
-							
-					timer1.schedule(task1, 1500);
-				}
-				else if (hp2 <=0)
+				if (hp2 <=0)
 				{
 					bg.setIcon(win);
 					HP.setVisible(false);
-					run.setVisible(false);
+					usedHP.setVisible(false);
+					rn.setVisible(false);
 					ft.setVisible(false);
-					quit.setVisible(false);
+					qt.setVisible(false);
 					enemy.setIcon(null);
 					Char.setIcon(null);
 					effect.setIcon(null);
@@ -300,10 +448,11 @@ public class CS10FinalProject {
 					ab2.setVisible(false);
 					ab3.setVisible(false);
 					rtrn.setVisible(false);
+					mana.setVisible(false);
 					
-					Timer timer1 = new Timer();
+					Timer wintimer = new Timer();
 					
-					TimerTask task1 = new TimerTask() 
+					TimerTask win = new TimerTask() 
 					{
 						public void run() 
 						{
@@ -311,11 +460,45 @@ public class CS10FinalProject {
 						}
 					};
 							
-					timer1.schedule(task1, 1500);
+					wintimer.schedule(win, 1500);
 				}
 			}
 			
 			
+		});
+		
+		ab3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				// makes fight buttons invisible
+				ab1.setVisible(false);
+				ab2.setVisible(false);
+				ab3.setVisible(false);
+				rtrn.setVisible(false);
+				// makes spell buttons visible
+				sp1.setVisible(true);
+				sp2.setVisible(true);
+				sp3.setVisible(true);
+				rtrn2.setVisible(true);
+			}
+		});
+		
+		rtrn2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				// makes spell buttons invisible
+				sp1.setVisible(false);
+				sp2.setVisible(false);
+				sp3.setVisible(false);
+				rtrn2.setVisible(false);
+				// makes fight buttons visible
+				ab1.setVisible(true);
+				ab2.setVisible(true);
+				ab3.setVisible(true);
+				rtrn.setVisible(true);
+			}
 		});
 		
 		rtrn.addActionListener(new ActionListener() 
@@ -324,9 +507,10 @@ public class CS10FinalProject {
 			{
 				// makes main buttons visible
 				ft.setVisible(true);
-				quit.setVisible(true);
+				qt.setVisible(true);
 				HP.setVisible(true);
-				run.setVisible(true);
+				usedHP.setVisible(true);
+				rn.setVisible(true);
 				// makes fight buttons invisible
 				ab1.setVisible(false);
 				ab2.setVisible(false);
@@ -335,7 +519,7 @@ public class CS10FinalProject {
 			}
 		});
 		
-		quit.addActionListener(new ActionListener() 
+		qt.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
@@ -343,15 +527,17 @@ public class CS10FinalProject {
 				bg.setIcon(quit1);
 				// changes buttons as needed
 				HP.setVisible(false);
-				run.setVisible(false);
+				usedHP.setVisible(false);
+				rn.setVisible(false);
 				ft.setVisible(false);
-				quit.setVisible(false);
+				qt.setVisible(false);
 				enemy.setIcon(null);
 				Char.setIcon(null);
 				health.setVisible(false);
 				health2.setVisible(false);
 				no.setVisible(true);
 				yes.setVisible(true);
+				mana.setVisible(false);
 			}
 		});
 		
@@ -378,16 +564,17 @@ public class CS10FinalProject {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				// sets background to fight scene 1
+				// sets background to fight scene
 				bg.setIcon(bg1);
 				// makes characters appear
 				Char.setIcon(char1);
 				enemy.setIcon(enemy1);
 				// makes main buttons visible
 				ft.setVisible(true);
-				quit.setVisible(true);
+				qt.setVisible(true);
 				HP.setVisible(true);
-				run.setVisible(true);
+				usedHP.setVisible(true);
+				rn.setVisible(true);
 				// makes hp bars visible
 				health.setVisible(true);
 				health2.setVisible(true);
